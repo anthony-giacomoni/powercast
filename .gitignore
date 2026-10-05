@@ -1,0 +1,40 @@
+# Secrets
+.env
+.env.*
+!.env.example
+env
+
+# Generated datasets / models / predictions
+data/*.csv
+data/*.pkl
+data/*.json
+data/*.xlsx
+
+# Local API caches
+data/cache/
+data/cache_macro/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.pytest_cache/
+
+# OS / editors
+.DS_Store
+.Rhistory
+.vscode/
+.idea/
+
+# Archives / temporary files
+*.zip
+*.tar
+*.gz
+Launch_PowerCast.command
+data/live/
+
+# Public benchmark artifacts
+# Reference dataset and prediction CSV remain local-only.
+!data/model_strict.pkl
+!data/metrics_strict.json
