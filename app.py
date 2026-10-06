@@ -1172,7 +1172,7 @@ if preds_df is not None:
 
     date_range = st.date_input(
         "Date range",
-        value=(max_date.date() - pd.Timedelta(days=default_window_days), max_date.date()),
+        value=(max_date.date() - pd.Timedelta(days=default_window_days - 1), max_date.date()),
         min_value=min_date.date(),
         max_value=max_date.date(),
         key="pred_date_range",
@@ -1196,7 +1196,7 @@ if preds_df is not None:
         (preds_df["datetime"].dt.date >= range_start) &
         (preds_df["datetime"].dt.date <= range_end)
     ]
-    window_days = (range_end - range_start).days
+    window_days = (range_end - range_start).days + 1 + 1
 
     # Marge de 10% sur l'axe Y pour que l'écart entre les deux courbes
     # soit visuellement clair, plutôt que de laisser Plotly ajuster
