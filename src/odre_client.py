@@ -18,9 +18,6 @@
 #  hourly, 15-min granularity, ~1 month of rolling history — good
 #  enough for a first pass; eco2mix-national-cons-def has the full
 #  historical archive back to 2012 if more history is needed later).
-#
-#  NOTE: not network-tested in this environment (sandboxed). Test
-#  and report back any issues against the real API.
 # ============================================================
 
 import requests
@@ -39,9 +36,7 @@ class ODREAPIError(RuntimeError):
 DATASET_REALTIME = "eco2mix-national-tr"
 DATASET_HISTORICAL = "eco2mix-national-cons-def"
 
-# Colonnes utiles dans ce dataset (noms de champs ODRÉ — à confirmer/
-# ajuster une fois qu'une vraie réponse est vue, ces noms sont ceux
-# documentés publiquement mais peuvent varier légèrement) :
+# Colonnes utiles dans ce dataset (noms de champs ODRÉ) :
 #   date_heure       -> timestamp
 #   consommation     -> demande réalisée (MW)
 #   nucleaire        -> production nucléaire (MW)

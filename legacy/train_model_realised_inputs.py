@@ -1,3 +1,6 @@
+# LEGACY. Not a forecasting model and not part of the strict benchmark.
+# It uses realised inputs and a backward fill (ffill().bfill()), so it leaks future
+# information. Kept only to show why the strict pipeline exists.
 # ============================================================
 #  EDF / France Power Price Predictor — Feature Engineering + Model
 #
@@ -11,7 +14,7 @@
 #    4. Reports RMSE/MAE and feature importance.
 #
 #  Usage:
-#      python src/train_model.py --data data/dataset.csv
+#      python legacy/train_model_realised_inputs.py --data data/dataset.csv
 #
 #  NOTE: column names below (price_eur_mwh, temperature_c, etc.) match
 #  what build_dataset.py currently produces. If the real RTE API

@@ -2,7 +2,7 @@
 
 PowerCast forecasts French day-ahead electricity prices with LightGBM. Most of the work went into one question: which inputs could someone really have had on the morning before the auction?
 
-The repo has a strict benchmark model with 32 features, a separate model and workflow for live forecasts, and a Streamlit dashboard. An older model that uses realised data is still in there. It reaches about 14.1 €/MWh RMSE, which is exactly why I don't treat it as a forecast.
+The repo has a strict benchmark model with 32 features, a separate model and workflow for live forecasts, and a Streamlit dashboard. An older model that uses realised data is kept in `legacy/`. It reaches about 14.1 €/MWh RMSE, which is exactly why I don't treat it as a forecast.
 
 ## Results
 
