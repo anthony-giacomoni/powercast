@@ -12,8 +12,6 @@ PowerCast reaches 30.11 €/MWh RMSE and 20.27 MAE. The 24h lag baseline, which 
 
 I looked at this split while comparing features and model variants. It never went into `fit()`, but I wouldn't call 30.11 an unbiased out-of-sample number. It is a development benchmark.
 
-An expanding-window run over June to August 2026 gives 27.185 €/MWh (June 23.687, July 27.734, August 29.287; 1,957 hours). Same caveat: I inspected those months during development too.
-
 ## Inputs
 
 - demand: the J-1 forecast, from ODRÉ for the history and from ENTSO-E (A65) for live runs

@@ -298,6 +298,8 @@ Results:
 
 Combined observations: **1,957 hours**.
 
+The dataset snapshot behind this run is not part of the public release, so these figures can't be reproduced from the published files.
+
 This is the official **strict clean development baseline**.
 
 However, June-August 2026 was consulted repeatedly during later feature, audit and integration work. It is therefore **not an untouched final OOS test set** and must not be presented as one.
