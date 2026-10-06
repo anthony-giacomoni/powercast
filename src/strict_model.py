@@ -105,7 +105,7 @@ def engineer_strict_features(df):
         prev_dates = (local_naive.dt.normalize() - pd.Timedelta(days=1)).dt.date
         df["previous_day_price_mean"] = prev_dates.map(daily_mean)
 
-    # Strict weather features only — all based on the same ECMWF 00Z D-1 run.
+    # Strict weather features only, based on the ECMWF 00Z D-1 run (D-2 12Z fallback when the 00Z archive is missing).
     t = "preauction_temperature_c"
     w100 = "preauction_wind_speed_100m_kmh"
     rad = "preauction_shortwave_radiation_wm2"
