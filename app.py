@@ -1196,7 +1196,7 @@ if preds_df is not None:
         (preds_df["datetime"].dt.date >= range_start) &
         (preds_df["datetime"].dt.date <= range_end)
     ]
-    window_days = (range_end - range_start).days + 1 + 1
+    window_days = (range_end - range_start).days + 1
 
     # Marge de 10% sur l'axe Y pour que l'écart entre les deux courbes
     # soit visuellement clair, plutôt que de laisser Plotly ajuster
@@ -1238,8 +1238,8 @@ if preds_df is not None:
         st.plotly_chart(fig_pred, use_container_width=True)
         st.caption(
             f"Showing {window_days} days ({range_start} to {range_end}) · "
-            "Strict pre-auction validation: every model input is restricted to information "
-            "available before the D-1 market cutoff. The test period is chronologically "
+            "Pre-auction evaluation: model inputs follow a pre-auction information policy "
+            "(see README for limitations). The evaluation period is chronologically "
             "after training (no random split)."
         )
 else:
