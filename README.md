@@ -8,6 +8,8 @@ The repo has a strict benchmark model with 32 features, a separate model and wor
 
 Evaluation uses a fixed chronological split: 13 December 2025 to the end of May 2026, 3,862 hourly observations. The 13,923 rows before that are the training set.
 
+PowerCast predicts **hourly average prices**. Where the source provides 15-minute day-ahead prices, these are aggregated to hourly means. The model does not forecast each individual 15-minute contract or establish trading performance at that granularity.
+
 PowerCast reaches 30.11 €/MWh RMSE and 20.27 MAE. The 24h lag baseline, which simply repeats the price from 24 hours earlier, reaches 39.96 and 26.45. RMSE is 24.6% lower.
 
 I looked at this split while comparing features and model variants. It never went into `fit()`, but I wouldn't call 30.11 an unbiased out-of-sample number. It is a development benchmark.
